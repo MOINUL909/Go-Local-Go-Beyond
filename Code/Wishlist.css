@@ -1,0 +1,367 @@
+
+.Wishlist {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: start;
+    max-width: 1520px;
+  }
+  
+  .top-banner {
+    background-color: #ddd4d4;
+    display: flex;
+    width: 100%;
+    max-width: 1420px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2px 80px;
+    font: 400 14px/1 Lato, sans-serif;
+  }
+  
+  .welcome-text {
+    color: #222;
+    margin: auto 0;
+  }
+  
+  .top-nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    color: #000;
+  }
+  
+  .tracking-wrapper {
+    display: flex;
+    gap: 5px;
+    margin: auto 0;
+  }
+  
+  .icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 15px;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    gap: 5px;
+    margin: auto 0;
+  }
+  
+  .login-btn {
+    border-radius: 3px;
+    background-color: #000;
+    color: #fff;
+    padding: 9px 20px;
+  }
+  
+  .header {
+    display: flex;
+    width: 1350px;
+    max-width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1px 16px;
+    font: 14px Lato, sans-serif;
+  }
+  
+  .search-section {
+    display: flex;
+    gap: 400px 44px;
+    color: #757575;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    width: 64px;
+    border-radius: 62px;
+    alt: "Go Local Go Beyond Logo";
+  }
+  
+  .search-box {
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    gap: 40px 100px;
+    overflow: hidden;
+    flex-grow: 1;
+    margin: auto 0;
+    padding: 14px 16px;
+    border: 2px solid #000;
+  }
+  
+  .search-icon {
+    aspect-ratio: 0.94;
+    object-fit: contain;
+    width: 16px;
+    alt: "Search Icon";
+  }
+  
+  .contact-cart {
+      display: flex;
+      align-items: start;
+      gap: 48px;
+      margin: auto 0;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      margin-top: 4px;
+    }
+    
+    .contact-label {
+      font-weight: 400;
+    }
+  
+    .phone-icon {
+      width: 52px;
+      aspect-ratio: 1.37;
+      object-fit: contain;
+    }
+    
+    .cart-icon {
+      width: 52px;
+      aspect-ratio: 1.37;
+      object-fit: contain;
+    }
+    
+    .cart-info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 4px;
+    }
+    
+    .cart-label {
+      font-weight: 400;
+      line-height: 1;
+    }
+    
+    .cart-amount {
+      font-weight: 700;
+      line-height: 18px;
+    }
+    
+  .nav-container {
+    display: flex;
+    width: 1350px;
+    max-width: 100%;
+    flex-direction: column;
+    color: #fff;
+    padding: 0 15px;
+    font: 400 15px/1.2 Inter, sans-serif;
+  }
+  
+  .main-nav {
+    background-color: rgba(10, 11, 10, 0.42);
+    display: flex;
+    gap: 40px;
+    padding: 10px 20px;
+  }
+  
+
+  .wishlist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(107, 114, 128);
+    text-align: center;
+    font: 400 14px/1 Lato, sans-serif;
+  }
+  .wishlist-title {
+    color: rgb(34, 34, 34);
+    font: 32px/1.1 Poppins, sans-serif;
+  }
+  .empty-wishlist-heading {
+    color: rgb(34, 34, 34);
+    font: 700 32px/1.1 Poppins, sans-serif;
+    margin: 100px 0 0;
+  }
+  .empty-wishlist-message {
+    margin: 27px 0 0;
+  }
+  .wishlist-suggestion {
+    margin: 15px 0 0;
+  }
+  .wishlist-description {
+    margin: 15px 0 0;
+  }
+  .home-link {
+    background: rgb(0, 0, 0);
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding: 13px 70px;
+    font: 500 16px/1 'Josefin Sans', sans-serif;
+    margin: 36px 0 0;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+  .home-link:hover,
+  .home-link:focus {
+    opacity: 0.9;
+  }
+  .home-link:focus-visible {
+    outline: 2px solid rgb(0, 0, 0);
+    outline-offset: 2px;
+  }
+
+
+
+  
+  .footer {
+    background-color: #515050;
+    display: flex;
+    width: 100%;
+    padding-top: 34px;
+    flex-direction: column;
+  }
+  
+  .footer-content {
+    display: flex;
+    margin-left: 39px;
+    width: 100%;
+    max-width: 1381px;
+    gap: 20px;
+    color: #fff;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font: 14px/1.1 Lato, sans-serif;
+  }
+  
+  .footer-description {
+    color: #eae7d3;
+    line-height: 1.1;
+    margin-top: 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    line-height: 2;
+    margin: auto 0;
+  }
+  
+  .footer-heading {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.1;
+  }
+  
+  .social-section {
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  
+  .social-icons {
+    aspect-ratio: 12.05;
+    object-fit: contain;
+    width: 420px;
+    margin-top: 23px;
+    alt: "Social Media Icons";
+  }
+  
+  .payment-methods {
+      background: #bbbebf;
+      padding: 2px 80px;
+      margin-top: 110px;
+    }
+    
+    .copyright {
+      background: #7a7c81;
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 27px;
+      color: #fff;
+    }
+    
+    .developer {
+      display: flex;
+      gap: 11px;
+    }
+    
+    .developer-name {
+      color: #222;
+      font-weight: 700;
+    }
+  
+  @media (max-width: 991px) {
+    .top-banner {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    
+    .contact-wrapper {
+      white-space: initial;
+    }
+    
+    .login-btn {
+      white-space: initial;
+    }
+    
+    .search-box {
+      max-width: 100%;
+    }
+    
+    .nav-container {
+      white-space: initial;
+    }
+    
+    .main-nav {
+      max-width: 100%;
+      white-space: initial;
+    }
+    
+  
+
+    .empty-wishlist-heading {
+      margin-top: 40px;
+    }
+    .home-link {
+      padding: 13px 20px;
+    }
+  
+    
+    
+    .footer-content {
+      max-width: 100%;
+    }
+    
+    .footer-bottom {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    .payment-methods {
+      padding: 0 20px;
+      margin-top: 40px;
+    }
+    
+    .copyright {
+      padding: 0 20px;
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+  
+  
