@@ -1,0 +1,608 @@
+<style>
+    .profile-container {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: center;
+      justify-content: start;
+      
+    }
+    .top-banner {
+      background: #ddd4d4;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 80px;
+      font: 400 14px/1 Lato, sans-serif;
+    }
+    .welcome-text {
+      color: #222;
+      margin: auto 0;
+    }
+  
+    .top-nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+    
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .nav-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      width: 15px;
+    }
+  
+    .user-badge {
+      border-radius: 3px;
+      background-color: #000;
+      align-self: stretch;
+      font-size: 10px;
+      color: #fff;
+      padding: 12px 20px;
+    }
+  
+    .header-container {
+      display: flex;
+      margin-top: 18px;
+      width: 1350px;
+      max-width: 100%;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 1px 16px;
+      font: 14px Lato, sans-serif;
+    }
+  
+    .search-section {
+      display: flex;
+      gap: 40px 44px;
+      color: #757575;
+      font-weight: 400;
+      flex-wrap: wrap;
+    }
+  
+    .logo {
+      aspect-ratio: 1;
+      object-fit: contain;
+      width: 64px;
+      border-radius: 62px;
+    }
+  
+    .search-box {
+      border-radius: 5px;
+      background-color: #fff;
+      display: flex;
+      gap: 40px 100px;
+      overflow: hidden;
+      flex-grow: 1;
+      flex-basis: auto;
+      margin: auto 0;
+      padding: 14px 16px;
+      border: 2px solid #000;
+    }
+  
+    .search-icon {
+      aspect-ratio: 0.94;
+      object-fit: contain;
+      width: 16px;
+    }
+  
+    .contact-cart {
+      display: flex;
+      align-items: start;
+      gap: 40px 48px;
+      margin: auto 0;
+    }
+  
+    .contact-info {
+      display: flex;
+      margin-top: 4px;
+      flex-direction: column;
+      color: #000;
+      line-height: 1;
+    }
+  
+    .contact-label {
+      font-weight: 400;
+      align-self: start;
+    }
+  
+    .contact-number {
+      font-weight: 700;
+      margin-top: 10px;
+    }
+  
+    .cart-icon {
+      aspect-ratio: 1.37;
+      object-fit: contain;
+      width: 52px;
+    }
+  
+    .cart-info {
+      display: flex;
+      margin-top: 4px;
+      flex-direction: column;
+      color: #222;
+    }
+  
+    .cart-label {
+      font-weight: 400;
+      line-height: 1;
+    }
+  
+    .cart-amount {
+      font-weight: 700;
+      line-height: 18px;
+      align-self: start;
+    }
+  
+    .nav-container {
+    display: flex;
+    width: 1350px;
+    max-width: 100%;
+    flex-direction: column;
+    color: #fff;
+    padding: 0 15px;
+    font: 400 15px/1.2 Inter, sans-serif;
+    }
+  
+    .main-nav {
+      background-color: rgba(10, 11, 10, 0.42);
+      display: flex;
+     
+      gap: 40px;
+      padding: 10px 20px;
+    }
+  
+    .nav-link {
+      margin: auto 0;
+    }
+  
+    .nav-link-wide {
+      flex-grow: 1;
+      width: 1047px;
+      margin: auto 0;
+    }
+  
+    .profile-section {
+      display: flex;
+      margin-top: 18px;
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .profile-content {
+      border-radius: 76px;
+      background-color: #fff9f9;
+      width: 100%;
+      padding: 57px 80px;
+    }
+  
+    .profile-layout {
+      gap: 20px;
+      display: flex;
+    }
+  
+    .sidebar {
+      border-radius: 72px;
+      background-color: #60a5ff;
+      display: flex;
+      flex-direction: column;
+      color: #000;
+      width: 25%;
+      padding: 21px 25px 47px;
+      font: 400 24px/1 Lateef, sans-serif;
+    }
+  
+    .profile-avatar {
+      aspect-ratio: 0.93;
+      object-fit: contain;
+      width: 100px;
+      align-self: center;
+      max-width: 100%;
+    }
+  
+    .menu-item {
+      border-radius: 40px;
+      background-color: #d9d9d9;
+      margin-top: 12px;
+      padding: 16px 48px;
+    }
+  
+    .menu-item-active {
+      border-radius: 40px;
+      background-color: #aefcfa;
+      margin-top: 11px;
+      padding: 17px 48px;
+    }
+  
+    .profile-form {
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+        0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+      background-color: #fdfffe;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      color: #000;
+      max-width: 75%;
+      padding: 34px 30px;
+      font: 400 20px/0.9 Lancelot, sans-serif;
+    }
+  
+    .form-label {
+      align-self: start;
+      margin-left: 21px;
+      margin-right: 21px;
+    }
+  
+    .form-field {
+      border: 1px solid #000;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+        0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+      background-color: #fff7f7;
+      margin-top: 19px;
+      padding: 21px 70px;
+    }
+  
+    .form-input {
+      border: 1px solid #000;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+        0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+      background-color: #fff7f7;
+      display: flex;
+      margin-top: 5px;
+      height: 60px;
+    }
+  
+    .back-button {
+      border-radius: 20px;
+      border: 1px solid #000;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+        0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+      background-color: #fff7f7;
+      align-self: center;
+      width: 142px;
+      max-width: 100%;
+      font-size: 32px;
+      margin: 30px 0 0 21px;
+      padding: 21px 44px;
+    }
+  
+    .page-footer {
+      align-self: stretch;
+      display: flex;
+      margin-top: 18px;
+      width: 100%;
+      flex-direction: column;
+    }
+    .footer {
+    background-color: #515050;
+    display: flex;
+    width: 100%;
+    padding-top: 34px;
+    flex-direction: column;
+  }
+  
+  .footer-content {
+    display: flex;
+    margin-left: 39px;
+    width: 100%;
+    max-width: 1381px;
+    gap: 20px;
+    color: #fff;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font: 14px/1.1 Lato, sans-serif;
+  }
+  
+  .footer-description {
+    color: #eae7d3;
+    line-height: 1.1;
+    margin-top: 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    line-height: 2;
+    margin: auto 0;
+  }
+  
+  .footer-heading {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.1;
+  }
+  
+  .social-section {
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  
+  .social-icons {
+    aspect-ratio: 12.05;
+    object-fit: contain;
+    width: 420px;
+    margin-top: 23px;
+    alt: "Social Media Icons";
+  }
+  
+  .payment-methods {
+      background: #bbbebf;
+      padding: 2px 80px;
+      margin-top: 110px;
+    }
+    
+    .copyright {
+      background: #7a7c81;
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 27px;
+      color: #fff;
+    }
+    
+    .developer {
+      display: flex;
+      gap: 11px;
+    }
+    
+    .developer-name {
+      color: #222;
+      font-weight: 700;
+    }
+    @media (max-width: 991px) {
+      .top-banner {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+  
+      .nav-item {
+        white-space: initial;
+      }
+  
+      .user-badge {
+        white-space: initial;
+      }
+  
+      .search-box {
+        max-width: 100%;
+      }
+  
+      .nav-container {
+        white-space: initial;
+      }
+  
+      .main-nav {
+        max-width: 100%;
+        white-space: initial;
+      }
+  
+      .nav-link-wide {
+        max-width: 100%;
+      }
+  
+      .profile-section {
+        max-width: 100%;
+      }
+  
+      .profile-content {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+  
+      .profile-layout {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0px;
+      }
+  
+      .sidebar {
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+  
+      .menu-item {
+        padding: 0 20px;
+      }
+  
+      .menu-item-active {
+        white-space: initial;
+        padding: 0 20px;
+      }
+  
+      .profile-form {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+  
+      .form-label {
+        margin-left: 10px;
+      }
+  
+      .form-field {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+  
+      .form-input {
+        max-width: 100%;
+      }
+  
+      .back-button {
+        white-space: initial;
+        padding: 0 20px;
+      }
+  
+      .page-footer {
+        max-width: 100%;
+      }
+  
+      .footer-content {
+        max-width: 100%;
+      }
+  
+      .footer-sections {
+        max-width: 100%;
+      }
+  
+      .footer-logo {
+        margin-left: 10px;
+      }
+  
+      .footer-link {
+        padding-right: 20px;
+      }
+  
+      .footer-separator {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+  
+      .separator-line {
+        max-width: 100%;
+      }
+  
+      .footer-bottom {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+  </style>
+  
+  <header class="profile-container">
+    <div class="top-banner">
+      <div class="welcome-text">Welcome to www.GoLocalGoBeyond.com</div>
+      <nav class="top-nav">
+        <a href="Tracking.html" class="nav-item">
+            <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\logo\Tracking.png" alt="" class="nav-icon" />
+            <span>Order Tracking</span>
+          </a>
+          <a href="ContactUs.html" class="nav-item">
+            <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\logo\Contact.png" alt="" class="nav-icon" />
+            <span>Contact</span>
+          </a>
+          <button class="user-button">Moinul</button>
+      </nav>
+    </div>
+  
+    <div class="header-container">
+      <div class="search-section">
+        <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\logo\go logo.png" alt="Company logo" class="logo" />
+        <form class="search-box" role="search">
+          <label for="searchInput" class="visually-hidden">Search products</label>
+          <input type="search" id="searchInput" placeholder="Looking for something?" />
+          <button type="submit" aria-label="Search">
+            <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\logo\Search.png" alt="" class="search-icon" />
+          </button>
+        </form>
+      </div>
+      <div class="contact-cart">
+        <div class="contact-info">
+          <span class="contact-label">Call Us Now:</span>
+          <span class="contact-number">01812089547</span>
+        </div>
+        <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\logo\Cart.png" alt="Shopping cart" class="cart-icon" />
+        <div class="cart-info">
+          <span class="cart-label">Cart amount</span>
+          <span class="cart-amount">৳ 0</span>
+        </div>
+      </div>
+    </div>
+  
+    <nav class="nav-container">
+        <ul class="main-nav">
+            <li><a href="C-Boy.html">Boy</a></li>
+            <li><a href="C-Girl.html">Girl</a></li>
+            <li><a href="C-Baby.html">Baby</a></li>
+            <li><a href="C-Foods.html">Foods</a></li>
+          </ul>
+    </nav>
+  
+  
+    <main class="profile-section">
+      <div class="profile-content">
+        <div class="profile-layout">
+          <aside class="sidebar">
+            <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\logo\Profile.png" alt="User profile picture" class="profile-avatar" />
+            <a href="Profile-DashBoard.html" class="menu-item">Dash Board</a>
+            <a href="Profile-Profile.html" class="menu-item-active">Profile</a>
+            <a href="Profile-EditPro.html" class="menu-item">Edit Profile</a>
+            <a href="Profile-SetPass.html" class="menu-item">Set Password</a>
+            <a href="In-Out.html" class="menu-item">Log Out</a>
+          </aside>
+  
+          <form class="profile-form">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" value="Moinul Islam" class="form-field" readonly /><br>
+            
+            <label for="mobile" class="form-label">Mobile No.</label>
+            <input type="tel" id="mobile" class="form-input" /><br>
+            
+            <label for="city" class="form-label">City</label>
+            <input type="text" id="city" class="form-input" /><br>
+            
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" id="email" class="form-input" /><br>
+            
+            <label for="address" class="form-label">Address</label>
+            <textarea id="address" class="form-input"></textarea><br>
+            
+            <button  type="button" class="back-button"><a href="Profile-DashBoard.html">Back</a></button>
+          </form>
+        </div>
+      </div>
+    </main>
+  
+    <footer class="footer">
+        <div class="footer-content">
+          <section>
+            <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\logo\go logo.png" alt="Footer Logo" class="logo">
+            <p class="footer-description">
+                Go Local, Go Beyond is to develop an intuitive and<br>
+                secure e-commerce platform designed specifically for<br>
+                local businesses in Bangladesh. The platform will support<br>
+                merchants by allowing them to easily set up online<br>
+                stores, manage products, and integrate payment and<br>
+                delivery services.
+            </p>
+          </section>
+    
+          <nav class="footer-links">
+            <h2 class="footer-heading">Quick Links</h2>
+            <a href="Home.html">Home Page</a>
+            <a href="LogIn.html">User Login</a>
+            <a href="Register.html">User Register</a>
+          </nav>
+    
+          <section class="social-section">
+            <h2 class="footer-heading">Follow Us</h2>
+            <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\footer\Follow icon.png" alt="Social Media Links" class="social-icons">
+          </section>
+        </div>
+    
+        <div class="payment-methods">
+            <img src="G:\1. My Courses\Level-3 Term-1  Fall 24 C18\CSE316 Software Project III 1\Project\GO Local Go Beyond Test File\images\footer\Transaction image.png" alt="Accepted Payment Methods" />
+          </div>
+      
+          <div class="copyright">
+            <span>GoLocalGoBeyond.com</span>
+            <div class="developer">
+              <span>Developed by</span>
+              <span class="developer-name"><a href="https://sites.google.com/view/md-moinul-islam?usp=sharing">Moinul</a></span>
+            </div>
+          </div>
+      </footer>
+  </header>
